@@ -26,6 +26,7 @@ Decrypting
     NSString *message = [AESCrypt decrypt:encryptedData password:password];
 
 or
+
     NSString *message = @"top secret message";
     NSString *password = @"p4ssw0rd";
     NSString *iv = @"ivIV1ViVIv";
