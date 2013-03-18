@@ -25,6 +25,19 @@ Decrypting
 
     NSString *message = [AESCrypt decrypt:encryptedData password:password];
 
+or
+    NSString *message = @"top secret message";
+    NSString *password = @"p4ssw0rd";
+    NSString *iv = @"ivIV1ViVIv";
+
+Encrypting
+
+    NSString *encryptedData = [AESCrypt encrypt:message password:password iv:iv];
+
+Decrypting
+
+    NSString *message = [AESCrypt decryptWithIV:encryptedData password:password];
+
 ## Common sense
 
 AESCrypt includes Base64 and Crypto extensions for NSData and NSString classes. If you're already using an extension that provides these, there is no need to use the included classes. Change the code in the AESCrypt class to correspond to your existing implementation of these extensions.
