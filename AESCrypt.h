@@ -34,4 +34,7 @@
 + (NSString *)encrypt:(NSString *)message password:(NSString *)password;
 + (NSString *)decrypt:(NSString *)base64EncodedString password:(NSString *)password;
 
++ (NSString *)encrypt:(NSString *)message password:(NSString *)password iv:(id)iv; // iv can be NSString or NSData
++ (NSString *)decryptWithIV:(NSString *)base64EncodedString password:(NSString *)password; // be sure you used +encrypt:password:iv: for encryption otherwise this will return a mess
+
 @end
